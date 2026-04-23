@@ -54,7 +54,7 @@ jobs:
         run: |
           copilot \
             --model "gpt-5.4-mini" \
-            --prompt "/devbog-updates summary ${{ steps.output-path.outputs.post_date }} save to ${{ steps.output-path.outputs.output_path }}" \
+            --prompt "/devblog-updates summary ${{ steps.output-path.outputs.post_date }} save to ${{ steps.output-path.outputs.output_path }}" \
             --yolo \
             --no-ask-user
           cat "${{ steps.output-path.outputs.output_path }}" >> "$GITHUB_STEP_SUMMARY"
